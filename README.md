@@ -15,12 +15,12 @@ Installation and usage
 
 * Place `django_markdown2` somewhere in your `PYTHONPATH`.
 * Add `django_markdown2` to you `INSTALLED_APPS`.
-* In any template do:
-
+* In any template do:  
+  
       {% load md2 %}
       {{ variable|markdown }}
-* Or specify additional extensions:
-
+* Or specify additional extensions:  
+  
       {% load md2 %}
       {{ variable|markdown:"safe, code-friendly, code-color" }}
 
