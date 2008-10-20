@@ -1,4 +1,3 @@
-<!-- markdown-extras: code-friendly -->
 django-markdown2
 ----------------
 
@@ -15,7 +14,7 @@ Installation and usage
 ======================
 
 * Place `django_markdown2` somewhere in your `PYTHONPATH`.
-* Add django_markdown2 to you INSTALLED_APPS.
+* Add `django_markdown2` to you `INSTALLED_APPS`.
 * In any template do:
 
         {% load md2 %}
