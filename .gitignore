@@ -1,2 +1,5 @@
 *.pyc
 .*.swp
+build
+dist
+django_markdown2.egg-info
