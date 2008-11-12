@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'django-markdown2',
-    version = '0.1.2',
+    version = '0.1.3',
     description = 'This is a simple app, which supplies a single template tag for markdown markup.',
     keywords = 'django apps utils',
     license = 'New BSD License',
     author = 'Alexander Artemenko',
     author_email = 'svetlyak.40wt@gmail.com',
     url = 'http://github.com/svetlyak40wt/django-markdown2/',
-    install_requires = ['markdown2==1.0.0.11'],
+    install_requires = ['markdown2==1.0.1.11'],
     #dependency_links = ['http://pypi.aartemenko.com', 'http://aartemenko.com/media/packages.html'],
     classifiers=[
         'Development Status :: 3 - Alpha',
