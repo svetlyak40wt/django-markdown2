@@ -36,10 +36,18 @@ def markdown2(value, arg=''):
             raise template.TemplateSyntaxError, "Error in {% markdown %} filter: The python-markdown2 library isn't installed."
         return force_unicode(value)
     else:
+        def parse_extra(extra):
+            if ':' not in extra:
+                return (extra, {})
+            name, values = extra.split(':', 1)
+            values = dict((str(val.strip()), True) for val in values.split('|'))
+            return (name.strip(), values)
+
         extras = (e.strip() for e in arg.split(','))
-        extras = [e for e in extras if e]
-        if len(extras) > 0 and extras[0] == "safe":
-            extras = extras[1:]
+        extras = dict(parse_extra(e) for e in extras if e)
+
+        if 'safe' in extras:
+            del extras['safe']
             safe_mode = True
         else:
             safe_mode = False

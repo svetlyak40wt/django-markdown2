@@ -25,6 +25,15 @@ Installation and usage
         {% load md2 %}
         {{ variable|markdown:"safe, code-friendly, code-color" }}
 
+* Also, if you use my recent markdown2-with-blackjack from http://pypi.aartemenko.com,
+  then you can pass additional options to code-color extension:
+
+        {% load md2 %}
+        {{ variable|markdown:"safe, code-friendly, code-color: noclasses|linenos" }}
+
+  Options from this example switch off css classes and turn on line numbers.
+
+
 Contribution
 ============
 
