@@ -7,12 +7,12 @@ This code is based on django's markup contrib.
 
 from django import template
 from django.conf import settings
-from django.utils.encoding import smart_str, force_unicode
+from django.utils.encoding import force_unicode
 from django.utils.safestring import mark_safe
 
 register = template.Library()
 
-def markdown2(value, arg=''):
+def markdown(value, arg=''):
     """
     Runs Markdown over a given value, optionally using various
     extensions python-markdown supports.
@@ -53,6 +53,6 @@ def markdown2(value, arg=''):
             safe_mode = False
 
         return mark_safe(markdown2.markdown(force_unicode(value), extras=extras, safe_mode=safe_mode))
-markdown2.is_safe = True
+markdown.is_safe = True
 
-register.filter(markdown2)
+register.filter(markdown)

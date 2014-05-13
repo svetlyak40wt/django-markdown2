@@ -9,8 +9,7 @@ setup(
     author = 'Alexander Artemenko',
     author_email = 'svetlyak.40wt@gmail.com',
     url = 'http://github.com/svetlyak40wt/django-markdown2/',
-    install_requires = ['markdown2-with-blackjack'],
-    dependency_links = ['http://pypi.aartemenko.com', ],
+    install_requires = ['markdown2'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Plugins',
