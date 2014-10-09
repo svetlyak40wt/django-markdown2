@@ -1,6 +1,8 @@
 django-markdown2
 ----------------
 
+[![changelog](http://allmychanges.com/p/python/django-markdown2/badge/)](http://allmychanges.com/p/python/django-markdown2/?utm_source=badge)
+
 This is a simple app, which supplies a single template tag for
 markdown markup.
 
