@@ -1,3 +1,9 @@
+0.2.1 (2014-10-12)
+==================
+
+* Fixed broken installation process. Please, update try to install this version
+  instead of 0.2.0.
+
 0.2.0 (2014-10-09)
 ==================
 

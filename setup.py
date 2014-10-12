@@ -1,20 +1,24 @@
+import os.path
 import codecs
 from setuptools import setup, find_packages
 
-with codecs.open('README.md', 'r', 'utf-8') as f:
-    long_description = f.read()
-    try:
-        import pandoc
-        pandoc.core.PANDOC_PATH = '/usr/local/bin/pandoc'
-        doc = pandoc.Document()
-        doc.markdown = long_description
-        long_description = doc.rst
-    except ImportError:
-        pass
+long_description = None
+
+if os.path.exists('README.md'):
+    with codecs.open('README.md', 'r', 'utf-8') as f:
+        long_description = f.read()
+        try:
+            import pandoc
+            pandoc.core.PANDOC_PATH = '/usr/local/bin/pandoc'
+            doc = pandoc.Document()
+            doc.markdown = long_description
+            long_description = doc.rst
+        except ImportError:
+            pass
 
 setup(
     name = 'django-markdown2',
-    version = '0.2.0',
+    version = '0.2.1',
     description = 'This is a simple app, which supplies a single template tag for markdown markup.',
     long_description = long_description,
     keywords = 'django apps utils',
