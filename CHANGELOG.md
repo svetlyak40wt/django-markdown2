@@ -1,3 +1,7 @@
+0.3.0 (unreleased)
+-------------------------
+* Added support for Django on Python 3.
+
 0.2.1 (2014-10-12)
 ==================
 

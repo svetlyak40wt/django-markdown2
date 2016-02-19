@@ -7,7 +7,14 @@ This code is based on django's markup contrib.
 
 from django import template
 from django.conf import settings
-from django.utils.encoding import force_unicode
+import sys
+
+if sys.version_info.major == 2:
+    from django.utils.encoding import force_unicode
+else:
+    force_unicode = lambda text: text
+
+
 from django.utils.safestring import mark_safe
 
 register = template.Library()
@@ -33,7 +40,7 @@ def markdown(value, arg=''):
         import markdown2
     except ImportError:
         if settings.DEBUG:
-            raise template.TemplateSyntaxError, "Error in {% markdown %} filter: The python-markdown2 library isn't installed."
+            raise template.TemplateSyntaxError("Error in {% markdown %} filter: The python-markdown2 library isn't installed.")
         return force_unicode(value)
     else:
         def parse_extra(extra):
