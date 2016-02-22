@@ -18,7 +18,7 @@ if os.path.exists('README.md'):
 
 setup(
     name = 'django-markdown2',
-    version = '0.2.1.1',
+    version = '0.3.0',
     description = 'This is a simple app, which supplies a single template tag for markdown markup.',
     long_description = long_description,
     keywords = 'django apps utils',
@@ -39,4 +39,3 @@ setup(
     packages = find_packages(),
     include_package_data = True,
 )
-
