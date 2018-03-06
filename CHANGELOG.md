@@ -1,3 +1,7 @@
+## 0.3.1 (2018-04-06)
+
+* Now package has explicit classifiers for python2 and python3 in setup.py and on pypi.org.
+
 ## 0.3.0 (2016-02-22)
 
 * Added support for Python 3.
